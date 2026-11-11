@@ -1,70 +1,40 @@
-# Customer Churn Intelligence Platform (ChurnIQ)
+# ChurnIQ – Customer Churn Intelligence Platform
 
-A machine learning-based web application that predicts customer churn and provides interactive analytics to help businesses understand customer retention.
+ChurnIQ is a machine learning-based web application that predicts customer churn and provides analytics to help businesses understand customer behavior and improve customer retention.
+
+## Live Demo
+
+- **Frontend Dashboard:** https://customer-churn-intelligence-6alh.onrender.com
+- **Backend API:** https://customer-churn-api-fhzx.onrender.com
 
 ## Features
 
-- **Customer Churn Prediction:** Predicts whether a customer is likely to leave.
-- **Churn Probability:** Displays the probability of customer churn.
-- **Risk Classification:** Classifies customers into risk levels.
-- **Customer Analytics:** Displays total, churned, and retained customers.
-- **Interactive Visualizations:** Includes charts for churn distribution, contract types, and customer tenure.
-- **Machine Learning:** Uses Logistic Regression and Random Forest models.
+- Customer churn prediction using Machine Learning.
+- Churn probability and risk-level classification.
+- Customer analytics dashboard.
+- Total, churned, and retained customer statistics.
+- Contract-wise churn analysis.
+- Tenure-wise churn analysis.
+- Interactive charts and visualizations.
 
 ## Technologies Used
 
-**Frontend**
-- React.js
-- Vite
-- Recharts
-- CSS
+**Frontend:** React.js, Vite, CSS, Recharts
 
-**Backend**
-- Python
-- Flask
-- Flask-CORS
-- Scikit-learn
-- Pandas
-- NumPy
+**Backend:** Python, Flask, Flask-CORS
 
-## Project Structure
+**Machine Learning:** Scikit-learn, Pandas, NumPy
 
-```text
-Customer_Churn_Intelligence/
-├── backend/
-│   ├── app.py
-│   ├── train_model.py
-│   ├── inspect_data.py
-│   ├── churn_model.pkl
-│   └── requirements.txt
-├── dataset/
-│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
-├── frontend/
-│   └── src/
-│       ├── App.jsx
-│       ├── App.css
-│       ├── index.css
-│       └── main.jsx
-├── .gitignore
-└── README.md
-```
+**Deployment:** Render
 
-## Dataset
+## Machine Learning
 
-This project uses the IBM Telco Customer Churn dataset.
+The project compares two machine learning algorithms:
 
-The dataset CSV is not included in this repository. Download the dataset and place it inside the `dataset` folder using this filename:
+- Logistic Regression
+- Random Forest Classifier
 
-`WA_Fn-UseC_-Telco-Customer-Churn.csv`
-
-## Machine Learning Model
-
-Two machine learning algorithms are evaluated:
-
-1. Logistic Regression
-2. Random Forest Classifier
-
-The models are evaluated using accuracy, precision, recall, and F1-score. Logistic Regression was selected based on its F1-score.
+The model with the better F1-score is selected and saved for predictions.
 
 ### Model Performance
 
@@ -75,7 +45,25 @@ The models are evaluated using accuracy, precision, recall, and F1-score. Logist
 | Recall | 78% |
 | F1-score | 61.36% |
 
-## Installation and Setup
+## Project Structure
+
+```text
+Customer_Churn_Intelligence/
+├── backend/
+│   ├── app.py
+│   ├── train_model.py
+│   ├── inspect_data.py
+│   ├── requirements.txt
+│   └── churn_model.pkl
+├── dataset/
+├── frontend/
+│   ├── src/
+│   └── package.json
+├── .gitignore
+└── README.md
+```
+
+## Run Locally
 
 ### 1. Clone the repository
 
@@ -84,29 +72,18 @@ git clone https://github.com/akshita200615/Customer_Churn_Intelligence.git
 cd Customer_Churn_Intelligence
 ```
 
-### 2. Set up the Python backend
+### 2. Backend Setup
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 pip install -r backend/requirements.txt
-```
-
-Make sure the dataset is placed in the `dataset` folder.
-
-### 3. Start the Flask backend
-
-From the project root directory:
-
-```bash
 python backend/app.py
 ```
 
-Backend URL: `http://127.0.0.1:5000`
+### 3. Frontend Setup
 
-### 4. Set up the React frontend
-
-Open a second terminal:
+Open another terminal:
 
 ```bash
 cd frontend
@@ -114,22 +91,18 @@ npm install
 npm run dev
 ```
 
-Frontend URL: `http://localhost:5174`
+### 4. Dataset
 
-## API Endpoints
+Download the IBM Telco Customer Churn dataset and place the CSV file inside the `dataset` folder.
 
-| Endpoint | Method | Description |
-|---|---|---|
-| `/health` | GET | Checks backend status |
-| `/predict` | POST | Predicts customer churn |
-| `/analytics` | GET | Provides customer analytics |
+Expected filename:
+
+`WA_Fn-UseC_-Telco-Customer-Churn.csv`
 
 ## Project Objective
 
-The objective of this project is to help businesses identify customers who may leave their services by using machine learning predictions and interactive data visualizations.
+The objective of ChurnIQ is to identify customers who are likely to leave a service by analyzing customer information and predicting churn risk using machine learning.
 
-## Author
+---
 
-**Akshita Neha**
-
-GitHub: [akshita200615](https://github.com/akshita200615)
+**Developed as a Customer Churn Prediction and Analytics project.**
