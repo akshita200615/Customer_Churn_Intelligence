@@ -5,7 +5,7 @@ ChurnIQ is a machine learning-based web application that predicts customer churn
 ## Live Demo
 
 - **Frontend Dashboard:** https://customer-churn-intelligence-6alh.onrender.com
-- **Backend API:** https://customer-churn-api-fhzx.onrender.com
+- **Backend API:** https://customer-churn-api-fhzx.onrender.com/health
 
 ## Features
 
