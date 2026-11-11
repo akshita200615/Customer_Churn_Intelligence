@@ -15,7 +15,7 @@ import {
 } from 'recharts';
 import './App.css';
 
-const API_URL = 'http://127.0.0.1:5000';
+const API_URL = 'https://customer-churn-api-fhzx.onrender.com';
 
 const fields = [
   { name: 'gender', label: 'Gender', options: ['Female', 'Male'] },
