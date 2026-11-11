@@ -1,0 +1,45 @@
+{
+    "total_customers": 7043,
+    "churned_customers": 1869,
+    "retained_customers": 5174,
+    "churn_rate": 26.54,
+    "contract_distribution": [
+        {
+            "contract": "Month-to-month",
+            "churned": 1655,
+            "retained": 2220
+        },
+        {
+            "contract": "One year",
+            "churned": 166,
+            "retained": 1307
+        },
+        {
+            "contract": "Two year",
+            "churned": 48,
+            "retained": 1647
+        }
+    ],
+    "tenure_distribution": [
+        {
+            "tenure": "0-12",
+            "churned": 1037,
+            "retained": 1149
+        },
+        {
+            "tenure": "13-24",
+            "churned": 294,
+            "retained": 730
+        },
+        {
+            "tenure": "25-48",
+            "churned": 325,
+            "retained": 1269
+        },
+        {
+            "tenure": "49-72",
+            "churned": 213,
+            "retained": 2026
+        }
+    ]
+}

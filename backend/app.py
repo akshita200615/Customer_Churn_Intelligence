@@ -4,6 +4,7 @@ from flask_cors import CORS
 import joblib
 import pandas as pd
 import os
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -160,7 +161,22 @@ def predict():
 # 4. CUSTOMER ANALYTICS API
 # =====================================
 
+
 @app.route("/analytics", methods=["GET"])
+def analytics():
+    try:
+        summary_path = os.path.join(
+            BASE_DIR, "analytics_summary.json"
+        )
+
+        with open(summary_path, "r") as file:
+            summary = json.load(file)
+
+        return jsonify(summary)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 def analytics():
 
     try:
